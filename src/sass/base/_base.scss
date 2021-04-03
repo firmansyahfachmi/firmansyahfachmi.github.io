@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@mixin base-padding() {
+  padding: 0 10vw !important;
+}
+
+.base-padding {
+  @include base-padding();
+}

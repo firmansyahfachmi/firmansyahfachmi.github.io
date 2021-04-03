@@ -1,0 +1,9 @@
+@mixin breakpoint($value) {
+  @each $screen, $width in $media-query {
+    @if ($value == $screen) {
+      @media #{$width} {
+        @content;
+      }
+    }
+  }
+}

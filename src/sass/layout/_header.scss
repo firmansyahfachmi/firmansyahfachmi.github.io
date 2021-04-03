@@ -1,3 +1,42 @@
 .header {
-  background-color: red;
+  padding: 10px 8vw;
+  //   background-color: $secondary-color;
+  display: flex;
+  justify-content: space-between;
+  &__logo-box{
+      color: $primary-color;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-family: $font-bold;
+  }
+  &__nav {
+    padding: 20px 0;
+    border-bottom: 1px solid $grey-light-1;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    .head-nav-link {
+      display: inline-block;
+      margin: 0 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: $secondary-color;
+        transition: all 0.2s;
+        font-family: $font-regular;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
 }

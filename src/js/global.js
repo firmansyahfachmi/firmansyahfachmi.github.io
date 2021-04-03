@@ -1,3 +1,1 @@
-function testing() {
-  console.log("hello")
-}
+AOS.init()

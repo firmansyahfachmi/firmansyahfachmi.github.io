@@ -1,0 +1,86 @@
+$media-query: (
+    fourk,
+    (
+      min-width: 2560px,
+    )
+  ),
+  (
+    twok,
+    (
+        min-width: 1920px,
+      )
+      // and
+    // (
+    //   max-width: 2559px,
+    // )
+  ),
+  (
+    wide,
+    (
+      min-width: 1441px,
+    )
+  ),
+  (
+    laptop,
+    (
+        min-width: 1024px,
+      )
+      and
+      (
+        max-width: 1199px,
+      )
+  ),
+  (
+    tablet,
+    (
+        min-width: 768px,
+      )
+      and
+      (
+        max-width: 991px,
+      )
+  ),
+  (
+    mobile,
+    (
+      max-width: 767px,
+    )
+  ),
+  (
+    small-mobile,
+    (
+      max-width: 360px,
+    )
+  );
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: Poppins-Light;
+  src: url("../fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: Poppins-Medium;
+  src: url("../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url("../fonts/Poppins-SemiBold.ttf");
+}
+//// FONTS
+$font-bold: Poppins-Bold;
+$font-light: Poppins-Light;
+$font-medium: Poppins-Medium;
+$font-regular: Poppins-Regular;
+$font-semibold: Poppins-SemiBold;
+
+/// COLOR
+$primary-color: #00adee;
+$secondary-color: #161616;
+$grey-light-1: #f1f1f1;

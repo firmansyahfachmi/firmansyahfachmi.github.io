@@ -39,10 +39,18 @@ function doStyle(cb) {
 
 function concatJs(cb) {
   return gulp
-    .src(["./src/js/*.js", "./src/js/libs/*.js"])
+    .src(["./src/js/libs/*.js", "./src/js/*.js"])
     .pipe(concat("global-concat.min.js"))
     .pipe(uglify())
     .pipe(gulp.dest(paths.scripts.dest))
+  cb()
+}
+
+function concatCss(cb) {
+  return gulp
+    .src("./src/css/*.css")
+    .pipe(concat("vendor.min.css"))
+    .pipe(gulp.dest(paths.styles.dest))
   cb()
 }
 
@@ -50,17 +58,18 @@ function imageMin(cb) {
   return gulp
     .src(paths.image.src)
     .pipe(imagemin())
-    .pipe(gulp.dest(paths.image.src))
+    .pipe(gulp.dest(paths.image.dest))
   cb()
 }
 
 function watch() {
   gulp.watch(paths.styles.src, doStyle)
   gulp.watch(paths.scripts.src, concatJs)
+  gulp.watch("./src/css/*.css", concatCss)
   gulp.watch(paths.image.src, imageMin)
   gulp.watch("./src/*.html", copyHtml)
 }
 
-gulp.task("run", gulp.series(doStyle, concatJs, imageMin, copyHtml))
+gulp.task("run", gulp.series(doStyle, concatJs, imageMin, copyHtml, concatCss))
 
 gulp.task("default", gulp.series("run", watch))
