@@ -39,7 +39,13 @@ function doStyle(cb) {
 
 function concatJs(cb) {
   return gulp
-    .src(["./src/js/libs/*.js", "./src/js/*.js"])
+    .src([
+      "./src/js/libs/rellax.min.js",
+      "./src/js/libs/jquery.min.js",
+      "./src/js/libs/aos.js",
+      "./src/js/libs/typewriter.js",
+      "./src/js/*.js",
+    ])
     .pipe(concat("global-concat.min.js"))
     .pipe(uglify())
     .pipe(gulp.dest(paths.scripts.dest))

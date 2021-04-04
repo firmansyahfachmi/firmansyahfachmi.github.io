@@ -3,6 +3,7 @@
   //   background-color: $secondary-color;
   display: flex;
   align-items: center;
+  padding: 0 8vw;
 
   &__left-side {
     width: 35%;
@@ -25,18 +26,26 @@
   }
 
   &__right-side {
-    width: 50%;
-    padding-left: 70px;
+    width: 60%;
+    padding-left: 100px;
     .sect-1-title {
       color: $secondary-color;
-      font-size: 32px;
       font-family: $font-light;
       letter-spacing: 1px;
 
       .hello {
-        font-size: 46px;
-        color: $primary-color;
+        font-size: 36px;
         font-family: $font-semibold;
+      }
+
+      .myName {
+        font-size: 62px;
+        color: $primary-color;
+        font-family: $font-bold;
+      }
+
+      .as {
+        font-size: 18px;
       }
     }
   }
@@ -45,9 +54,13 @@
 .sect-2 {
   background-color: $grey-light-1;
   padding-bottom: 80px;
+  position: relative;
+
   .sect-2__body {
     padding: 70px 0;
     margin-top: -100px;
+    z-index: 2;
+    height: 70vh;
   }
 
   h2 {
@@ -58,7 +71,7 @@
   }
 
   p {
-    font-family: $font-regular;
+    font-family: $font-light;
     font-size: 20px;
   }
 }

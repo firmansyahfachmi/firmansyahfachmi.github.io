@@ -73,6 +73,18 @@ $media-query: (
   font-family: Poppins-SemiBold;
   src: url("../fonts/Poppins-SemiBold.ttf");
 }
+// @font-face {
+//   font-family: Cairo-Light;
+//   src: url("../fonts/Cairo-Light.ttf");
+// }
+// @font-face {
+//   font-family: Cairo-Regular;
+//   src: url("../fonts/Cairo-Regular.ttf");
+// }
+// @font-face {
+//   font-family: Cairo-Bold;
+//   src: url("../fonts/Cairo-Bold.ttf");
+// }
 //// FONTS
 $font-bold: Poppins-Bold;
 $font-light: Poppins-Light;
@@ -80,7 +92,11 @@ $font-medium: Poppins-Medium;
 $font-regular: Poppins-Regular;
 $font-semibold: Poppins-SemiBold;
 
+// $font2-light: Cairo-Light;
+// $font2-regular: Cairo-Regular;
+// $font2-bold: Cairo-Bold;
+
 /// COLOR
 $primary-color: #00adee;
 $secondary-color: #161616;
-$grey-light-1: #f1f1f1;
+$grey-light-1: #eeeeee;
